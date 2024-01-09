@@ -3524,3 +3524,9 @@ details-disclosure>details {
   color: #fefefe;
   text-decoration: none;
 }
+
+.announcement-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
