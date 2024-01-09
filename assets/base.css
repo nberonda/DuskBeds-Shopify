@@ -3530,3 +3530,7 @@ details-disclosure>details {
   justify-content: space-between;
   align-items: center;
 }
+
+.announcement-bar__message {
+  margin: 0 auto;
+}
