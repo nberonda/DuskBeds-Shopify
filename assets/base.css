@@ -2117,6 +2117,7 @@ product-info .loading__spinner:not(.hidden)~*,
 /* utility-bar */
 .utility-bar {
   height: 100%;
+  background-color: #474546;
 }
 
 .utility-bar--bottom-border {
