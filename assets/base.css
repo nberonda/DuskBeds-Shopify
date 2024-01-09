@@ -2180,7 +2180,7 @@ product-info .loading__spinner:not(.hidden)~*,
   flex-wrap: wrap;
   align-content: center;
   grid-area: announcements;
-  background-color: #474546;
+  background-color: red;
 }
 
 .announcement-bar .slider--everywhere {
