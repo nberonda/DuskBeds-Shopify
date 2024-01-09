@@ -3525,7 +3525,7 @@ details-disclosure>details {
   text-decoration: none;
 }
 
-.announcement-container {
+.announcement-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
