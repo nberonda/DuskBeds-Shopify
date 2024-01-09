@@ -1,5 +1,6 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'announcement-bar.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign social_icons = true
@@ -41,7 +42,7 @@
             >
           {%- endif -%}
           <p class="announcement-bar__message h5">
-            <span>SPEND & SAVE | UP TO £125 OFF | Click here for more details</span>
+            <span>{{ section.blocks.first.settings.text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
               {% render 'icon-arrow' %}
             {%- endif -%}
@@ -301,7 +302,7 @@
         {
           "type": "text",
           "id": "text",
-          "default": "SPEND & SAVE | UP TO £125 OFF | Click here for more details",
+          "default": "Default Label",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
         },
         {
