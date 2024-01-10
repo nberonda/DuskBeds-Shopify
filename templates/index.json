@@ -67,10 +67,18 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "shop_by_bed_type": {
+      "type": "shop-by-bed-type",
+      "settings": {
+        "enable_shop_by_bed_type": true,
+        "selected_collections": []
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "shop_by_bed_type"
   ]
 }
