@@ -3,22 +3,22 @@
 {%- if section.settings.enable_shop_by_bed_type -%}
   <section class="shop-by-bed-type">
     <div class="bed-type-collection">
-      {%- assign collections = 'Ottoman Beds,Bed Frames,Sofa Beds,Ottoman Storage Benches' | split: ',' -%}
-      {%- for collection in collections -%}
-        {%- assign collection_handle = collection | handleize -%}
-        {%- assign collection_object = collections[collection_handle] -%}
-
-        {%- if collection_object -%}
-          <div class="bed-type-item">
-            <img
-              src="{{ collection_object.image.src | img_url: '300x300', scale: 2 }}"
-              alt="{{ collection }}"
-              class="rounded-image"
-            >
-            <p class="collection-name">{{ collection }}</p>
-          </div>
-        {%- endif -%}
-      {%- endfor -%}
+      {%- assign selected_collections = section.settings.selected_collections -%}
+      {%- if selected_collections.size > 0 -%}
+        {%- for collection_handle in selected_collections -%}
+          {%- assign collection = collections[collection_handle] -%}
+          {%- if collection -%}
+            <div class="bed-type-item">
+              <img
+                src="{{ collection.image.src | img_url: '300x300', scale: 2 }}"
+                alt="{{ collection.title }}"
+                class="rounded-image"
+              >
+              <p class="collection-name">{{ collection.title }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
     </div>
   </section>
 {%- endif -%}

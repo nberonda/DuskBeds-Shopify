@@ -1474,6 +1474,12 @@
         "label": "Enable Shop by bed type",
         "id": "enable_shop_by_bed_type",
         "default": true
+      },
+      {
+        "type": "collections",
+        "label": "Select Collections",
+        "id": "selected_collections",
+        "info": "Select the collections you want to display in the Shop by bed type section."
       }
     ]
   }
