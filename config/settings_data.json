@@ -117,6 +117,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "background-1",
+    "enable_shop_by_bed_type": true,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
