@@ -1,0 +1,24 @@
+{{ 'shop-by-bed-type-section.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.enable_shop_by_bed_type -%}
+  <section class="shop-by-bed-type">
+    <div class="bed-type-collection">
+      {%- assign collections = 'Ottoman Beds,Bed Frames,Sofa Beds,Ottoman Storage Benches' | split: ',' -%}
+      {%- for collection in collections -%}
+        {%- assign collection_handle = collection | handleize -%}
+        {%- assign collection_object = collections[collection_handle] -%}
+
+        {%- if collection_object -%}
+          <div class="bed-type-item">
+            <img
+              src="{{ collection_object.image.src | img_url: '300x300', scale: 2 }}"
+              alt="{{ collection }}"
+              class="rounded-image"
+            >
+            <p class="collection-name">{{ collection }}</p>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+{%- endif -%}

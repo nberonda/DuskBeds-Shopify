@@ -1,0 +1,17 @@
+.bed-type-collection {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bed-type-item {
+    text-align: center;
+}
+
+.rounded-image {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.collection-name {
+    font-size: 16px;
+}

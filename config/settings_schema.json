@@ -1465,5 +1465,16 @@
         "default": "background-1"
       }
     ]
+  },
+  {
+    "name": "shop_by_bed_type",
+    "settings": [
+      {
+        "type": "checkbox",
+        "label": "Enable Shop by bed type",
+        "id": "enable_shop_by_bed_type",
+        "default": true
+      }
+    ]
   }
 ]
