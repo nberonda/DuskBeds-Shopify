@@ -31,7 +31,8 @@
 <div class="custom-collections">
   {%- for i in (1..4) -%}
     {%- assign collectionId = settings["collection"] | append: i -%}
-    {%- assign collection = collections[collectionId] | handleize -%}
+    {%- assign collection = collections[collectionId] -%}
+    <h3>{{ collectionId }} | {{ collection | json }}</h3>
     {%- if collection -%}
       <div class="collection-box">
         <a href="{{ collection.url }}">
