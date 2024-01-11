@@ -14,7 +14,8 @@
 }
 
 .section-header {
-  display: block
+  display: block;
+  justify-self: center
 }
 
 .section-title {
