@@ -7,26 +7,22 @@
     {
       "type": "collection",
       "label": "Select Collection 1",
-      "id": "collection1",
-      "default": null
+      "id": "collection1"
     },
     {
       "type": "collection",
       "label": "Select Collection 2",
-      "id": "collection2",
-      "default": null
+      "id": "collection2"
     },
     {
       "type": "collection",
       "label": "Select Collection 3",
-      "id": "collection3",
-      "default": null
+      "id": "collection3"
     },
     {
       "type": "collection",
       "label": "Select Collection 4",
-      "id": "collection4",
-      "default": null
+      "id": "collection4"
     }
   ]
 }
@@ -34,12 +30,13 @@
 
 <div class="custom-collections">
   {% for i in (1..4) %}
-    {% assign collectionId = settings["collection" | append: i] %}
-    {% if collectionId %}
-      {% assign collection = collections[collectionId] %}
+  {% assign collectionId = settings["collection"] | append: i | prepend: 'collection' %}
+    {% assign collectionHandle = collectionId | handleize %}
+    {% assign collection = collections[collectionHandle] %}
+    {% if collection %}
       <div class="collection-box">
         <a href="{{ collection.url }}">
-          <img src="{{ collection.image.src | img_url: 'medium' }}" alt="{{ collection.title }}">
+          <img src="{{ collection.image.src | image_url: 'medium' }}" alt="{{ collection.title }}" width="200" height="200">
           <h3>{{ collection.title }}</h3>
         </a>
       </div>
