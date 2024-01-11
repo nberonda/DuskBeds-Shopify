@@ -43,11 +43,11 @@
 <div class="custom-collections">
   <div class="section-header">
     <h2>{{ section.settings.section_title }}</h2>
-    <p>{{ settings.section_subtitle }}</p>
+    <p>{{ section.settings.section_subtitle }}</p>
   </div>
 
   {%- for i in (1..4) -%}
-    {%- assign collectionId = settings["collection"] | append: i -%}
+    {%- assign collectionId = section.settings["collection"] | append: i -%}
     {%- assign collection = collections[collectionId] -%}
     {%- if collection -%}
       <div class="collection-box">
