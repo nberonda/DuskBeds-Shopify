@@ -1,12 +1,84 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{{ 'section-shop-by-colour.css' | asset_url | stylesheet_tag }}
+
+{%- schema -%}
+{
+  "name": "Shop by Colour",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Section Title",
+      "id": "section_title",
+      "default": "Shop by Colour"
+    },
+    {
+      "type": "text",
+      "label": "Section Subtitle",
+      "id": "section_subtitle",
+      "default": "custom subtitle here"
+    },
+    {
+      "type": "color",
+      "label": "Background Color",
+      "id": "background_color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "collection",
+      "label": "Select Collection 1",
+      "id": "collection1"
+    },
+    {
+      "type": "collection",
+      "label": "Select Collection 2",
+      "id": "collection2"
+    },
+    {
+      "type": "collection",
+      "label": "Select Collection 3",
+      "id": "collection3"
+    },
+    {
+      "type": "collection",
+      "label": "Select Collection 4",
+      "id": "collection4"
+    }
+  ]
+}
+{%- endschema -%}
+
+<style>
+  .predefined-collections {
+    background-color: {{ section.settings.background_color }};
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
   }
-{% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
+  .collection-box {
+    display: inline-block;
+    margin-right: 20px;
+  }
 
-{% javascript %}
-{% endjavascript %}
+  .collection-box img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+<div class="colour-collections">
+  <div class="section-header">
+    <h2>{{ settings.section_title }}</h2>
+    <p>{{ settings.section_subtitle }}</p>
+  </div>
+
+  {%- for i in (1..4) -%}
+    {%- assign collectionId = settings["collection"] | append: i -%}
+    {%- assign collection = collections[collectionId] -%}
+    {%- if collection -%}
+      <div class="collection-box">
+        <img src="{{ collection.image.src | image_url: 'original' }}" alt="{{ collection.title }}" width="200" height="200">
+        <p>{{ collection.title }}</p>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

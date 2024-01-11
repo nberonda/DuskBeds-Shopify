@@ -1,0 +1,35 @@
+.colour-collections {
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #666666;
+}
+
+.collection-box {
+  display: inline-block;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.collection-box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.collection-box p {
+  font-size: 14px;
+  color: #333333;
+  margin: 0;
+}
