@@ -131,6 +131,18 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "shop-by-colour": {
+        "type": "shop-by-colour",
+        "settings": {
+          "section_title": "Shop by Colour",
+          "section_subtitle": "Go on, find something fabulous.",
+          "background_color": "#f9f1ec",
+          "collection1": "natural",
+          "collection2": "grey",
+          "collection3": "off-white",
+          "collection4": "blue"
+        }
       }
     },
     "content_for_index": [
