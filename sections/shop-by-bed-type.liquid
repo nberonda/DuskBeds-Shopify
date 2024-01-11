@@ -31,7 +31,7 @@
 <div class="custom-collections">
   {% for i in (1..4) %}
     {% assign collectionId = settings["collection"] | append: i %}
-    {% assign collection = collection[collectionId] %}
+    {% assign collection = collections[collectionId] %}
     {% if collection %}
       <div class="collection-box">
         <a href="{{ collection.url }}">
