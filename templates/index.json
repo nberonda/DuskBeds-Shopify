@@ -71,13 +71,10 @@
     "shop_by_bed_type": {
       "type": "shop-by-bed-type",
       "settings": {
-        "enable_shop_by_bed_type": true,
-        "selected_collections": [
-          "Ottoman Beds",
-          "Bed Frames",
-          "Sofa Beds",
-          "Ottoman Storage Benches"
-        ]
+        "collection1": "ottoman-beds",
+        "collection2": "bed-frames",
+        "collection3": "sofa-beds",
+        "collection4": "ottoman-storage-benches"
       }
     }
   },
