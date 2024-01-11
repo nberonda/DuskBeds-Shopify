@@ -29,6 +29,10 @@
 {%- endschema -%}
 
 <div class="custom-collections">
+  {% for collectionId in collections %}
+  <p>{{ collectionId }}</p>
+{% endfor %}
+
   {%- for collectionId in collections -%}
     {%- assign collection = collections[collectionId] -%}
     {%- if collectionId contains 'collection' -%}
