@@ -29,16 +29,18 @@
 {%- endschema -%}
 
 <div class="custom-collections">
-  {% for i in (1..4) %}
-    {% assign collectionId = settings["collection"] | append: i %}
-    {% assign collection = collections[collectionId] %}
-    {% if collection %}
-      <div class="collection-box">
-        <a href="{{ collection.url }}">
-          <img src="{{ collection.image.src | image_url: 'original' }}" alt="{{ collection.title }}" width="200" height="200">
-          <h3>{{ collection.title }}</h3>
-        </a>
-      </div>
-    {% endif %}
-  {% endfor %}
+  {%- for collectionId in collections -%}
+    {%- assign collection = collections[collectionId] -%}
+    {%- if collectionId contains 'collection' -%}
+      {%- assign index = collectionId | remove: 'collection' | plus: 0 -%}
+      {%- if index > 0 and index <= 4 -%}
+        <div class="collection-box">
+          <a href="{{ collection.url }}">
+            <img src="{{ collection.image.src | image_url: 'original' }}" alt="{{ collection.title }}" width="200" height="200">
+            <h3>{{ collection.title }}</h3>
+          </a>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
 </div>
