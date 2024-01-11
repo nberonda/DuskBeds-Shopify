@@ -30,9 +30,8 @@
 
 <div class="custom-collections">
   {%- for i in (1..4) -%}
-    {%- assign collectionId = 'collection' | append: i -%}
-    {%- assign collection = collections[collectionId] -%}
-    <h3>{{ collection | json }}</h3>
+    {%- assign collectionId = settings["collection"] | append: i -%}
+    {%- assign collection = collections[collectionId] | handleize -%}
     {%- if collection -%}
       <div class="collection-box">
         <a href="{{ collection.url }}">
