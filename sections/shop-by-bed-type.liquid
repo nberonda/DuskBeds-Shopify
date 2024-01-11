@@ -5,6 +5,17 @@
   "name": "Custom Collections",
   "settings": [
     {
+      "type": "text",
+      "label": "Section Title",
+      "id": "section_title",
+      "default": "Shop by Bed Type"
+    },
+    {
+      "type": "text",
+      "label": "Section Subtitle",
+      "id": "section_subtitle"
+    },
+    {
       "type": "collection",
       "label": "Select Collection 1",
       "id": "collection1"
@@ -29,6 +40,11 @@
 {%- endschema -%}
 
 <div class="custom-collections">
+  <div class="section-header">
+    <h2>{{ settings.section_title }}</h2>
+    <p>{{ settings.section_subtitle }}</p>
+  </div>
+
   {%- for i in (1..4) -%}
     {%- assign collectionId = settings["collection"] | append: i -%}
     {%- assign collection = collections[collectionId] -%}
