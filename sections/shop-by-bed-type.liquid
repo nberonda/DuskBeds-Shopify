@@ -30,9 +30,8 @@
 
 <div class="custom-collections">
   {% for i in (1..4) %}
-  {% assign collectionId = settings["collection"] | append: i | prepend: 'collection' %}
-    {% assign collectionHandle = collectionId | handleize %}
-    {% assign collection = collections[collectionHandle] %}
+    {% assign collectionId = settings["collection"] | append: i %}
+    {% assign collection = collections[collectionId] %}
     {% if collection %}
       <div class="collection-box">
         <a href="{{ collection.url }}">
