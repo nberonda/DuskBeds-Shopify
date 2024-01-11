@@ -31,15 +31,7 @@
 <div class="custom-collections">
   {% for i in (1..4) %}
     {% assign collectionId = settings["collection"] | append: i %}
-    
-    {# Debugging: Output collectionId in the HTML comment for debugging purposes #}
-    <!-- Collection ID: {{ collectionId }} -->
-    
     {% assign collection = collection[collectionId] %}
-    
-    {# Debugging: Output collection information in the HTML comment for debugging purposes #}
-    <!-- Collection Info: {{ collection | json }} -->
-    
     {% if collection %}
       <div class="collection-box">
         <a href="{{ collection.url }}">
