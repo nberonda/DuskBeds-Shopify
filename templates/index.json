@@ -39,9 +39,22 @@
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
+    },
+    "shop_by_bed_type": {
+      "type": "shop-by-bed-type",
+      "settings": {
+        "section_title": "Shop by Bed Type",
+        "section_subtitle": "Go on, find something fabulous.",
+        "background_color": "#f9f1ec",
+        "collection1": "ottoman-beds",
+        "collection2": "bed-frames",
+        "collection3": "sofa-beds",
+        "collection4": "ottoman-storage-benches"
+      }
     }
   },
   "order": [
-    "image_banner"
+    "image_banner",
+    "shop_by_bed_type"
   ]
 }
