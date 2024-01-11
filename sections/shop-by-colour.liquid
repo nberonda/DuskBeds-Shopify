@@ -46,24 +46,6 @@
 }
 {%- endschema -%}
 
-<style>
-  .predefined-collections {
-    background-color: {{ section.settings.background_color }};
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 20px;
-  }
-
-  .collection-box {
-    display: inline-block;
-    margin-right: 20px;
-  }
-
-  .collection-box img {
-    max-width: 100%;
-    height: auto;
-  }
-</style>
 
 <div class="colour-collections">
   <div class="section-header">
@@ -82,3 +64,23 @@
     {%- endif -%}
   {%- endfor -%}
 </div>
+
+
+<style>
+  .predefined-collections {
+    background-color: {{ section.settings.background_color }};
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+  }
+
+  .collection-box {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .collection-box img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
