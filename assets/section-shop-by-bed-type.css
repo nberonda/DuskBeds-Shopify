@@ -1,17 +1,14 @@
-.bed-type-collection {
-    display: flex;
-    justify-content: space-around;
+.custom-collections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.bed-type-item {
+.collection-box {
     text-align: center;
 }
 
-.rounded-image {
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.collection-name {
-    font-size: 16px;
+.collection-box a {
+    text-decoration: none;
+    color: #333;
 }

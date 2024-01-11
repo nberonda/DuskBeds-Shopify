@@ -1,24 +1,48 @@
 {{ 'section-shop-by-bed-type.css' | asset_url | stylesheet_tag }}
 
-{%- if section.settings.enable_shop_by_bed_type -%}
-  <section class="shop-by-bed-type">
-    <div class="bed-type-collection">
-      {%- assign selected_collections = section.settings.selected_collections -%}
-      {%- if selected_collections.size > 0 -%}
-        {%- for collection_handle in selected_collections -%}
-          {%- assign collection = collections[collection_handle] -%}
-          {%- if collection -%}
-            <div class="bed-type-item">
-              <img
-                src="{{ collection.image.src | img_url: '300x300', scale: 2 }}"
-                alt="{{ collection.title }}"
-                class="rounded-image"
-              >
-              <p class="collection-name">{{ collection.title }}</p>
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-    </div>
-  </section>
-{%- endif -%}
+{%- schema -%}
+{
+  "name": "Custom Collections",
+  "settings": [
+    {
+      "type": "collection",
+      "label": "Select Collection 1",
+      "id": "collection1",
+      "default": null
+    },
+    {
+      "type": "collection",
+      "label": "Select Collection 2",
+      "id": "collection2",
+      "default": null
+    },
+    {
+      "type": "collection",
+      "label": "Select Collection 3",
+      "id": "collection3",
+      "default": null
+    },
+    {
+      "type": "collection",
+      "label": "Select Collection 4",
+      "id": "collection4",
+      "default": null
+    }
+  ]
+}
+{%- endschema -%}
+
+<div class="custom-collections">
+  {% for i in (1..4) %}
+    {% assign collectionId = settings["collection" | append: i] %}
+    {% if collectionId %}
+      {% assign collection = collections[collectionId] %}
+      <div class="collection-box">
+        <a href="{{ collection.url }}">
+          <img src="{{ collection.image.src | img_url: 'medium' }}" alt="{{ collection.title }}">
+          <h3>{{ collection.title }}</h3>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
