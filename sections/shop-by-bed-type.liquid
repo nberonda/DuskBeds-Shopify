@@ -50,6 +50,7 @@
     <h2 class="section-title">{{ section.settings.section_title }}</h2>
     <p class="section-subtitle">{{ section.settings.section_subtitle }}</p>
   </div>
+  <div class="collection-boxes">
 
   {%- for i in (1..4) -%}
     {%- assign collectionId = section.settings["collection"] | append: i -%}
@@ -63,6 +64,7 @@
       </div>
     {%- endif -%}
   {%- endfor -%}
+  </div>
 </div>
 
 
