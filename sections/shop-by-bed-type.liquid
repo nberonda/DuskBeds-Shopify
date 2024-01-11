@@ -35,7 +35,7 @@
     {%- if collection -%}
       <div class="collection-box">
         <a href="{{ collection.url }}">
-          <img src="{{ collection.image.src | image_url: 'original' }}" alt="{{ collection.title }}" width="200" height="200">
+          <img src="{{ collection.image.src | image_url: collection }}" alt="{{ collection.title }}" width="200" height="200">
           <h3>{{ collection.title }}</h3>
         </a>
       </div>
