@@ -1476,7 +1476,7 @@
         "default": true
       },
       {
-        "type": "collections",
+        "type": "collection",
         "label": "Select Collections",
         "id": "selected_collections",
         "info": "Select the collections you want to display in the Shop by bed type section."
