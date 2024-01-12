@@ -430,6 +430,12 @@
 
 .banner__heading {
   margin-bottom: 0;
+  color: #FFF;
+  font-family: Playfair Display;
+  font-size: 56.25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .banner__box .banner__heading+* {
