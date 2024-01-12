@@ -1301,7 +1301,6 @@ button.shopify-payment-button__button--unbranded {
 .button--secondary:after {
   --border-opacity: var(--buttons-border-opacity);
   background-color: #ffffff;
-  color: #474546 !important;
 
 }
 
