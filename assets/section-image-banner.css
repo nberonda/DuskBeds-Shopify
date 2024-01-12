@@ -468,6 +468,8 @@
 
 .banner__box>*+.banner__buttons {
   margin-top: 2rem;
+  justify-self: flex-start !important;
+  display: flex;
 }
 
 @media screen and (max-width: 749px) {
