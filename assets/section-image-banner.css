@@ -6,6 +6,7 @@
 
 .banner__box {
   text-align: left;
+  margin-left: 2em;
 }
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
@@ -133,7 +134,8 @@
 
   .banner__content.banner__content--bottom-center {
     align-items: flex-end;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 2em;
   }
 
   .banner__content.banner__content--bottom-right {
