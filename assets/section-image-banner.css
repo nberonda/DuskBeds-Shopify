@@ -488,4 +488,5 @@
 
 .banner__content {
   justify-self: flex-start;
+  margin-left: 0 !important;
 }
