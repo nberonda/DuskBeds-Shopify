@@ -2346,6 +2346,7 @@ product-info .loading__spinner:not(.hidden)~*,
 /* section-header */
 .section-header.shopify-section-group-header-group {
   z-index: 3;
+  background-color: #f9f1ec;
 }
 
 .shopify-section-header-sticky {
