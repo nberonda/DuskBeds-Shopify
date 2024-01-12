@@ -485,3 +485,7 @@
     color: currentColor;
   }
 }
+
+.banner__box {
+  justify-self: flex-start;
+}
