@@ -135,7 +135,7 @@
   .banner__content.banner__content--bottom-center {
     align-items: flex-end;
     justify-content: left;
-    padding-left: 2em;
+    padding-left: 1em;
   }
 
   .banner__content.banner__content--bottom-right {
