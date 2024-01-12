@@ -443,6 +443,14 @@
   max-width: 45rem;
   word-break: break-word;
   color: #474546 !important;
+  color: #474546;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16.5px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  /* 181.818% */
 }
 
 @media screen and (max-width: 749px) {
