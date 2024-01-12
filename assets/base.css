@@ -3536,3 +3536,7 @@ details-disclosure>details {
 .announcement-bar__message {
   margin: 0 auto;
 }
+
+.content-for-layout {
+  background-color: #f9f1ec;
+}
