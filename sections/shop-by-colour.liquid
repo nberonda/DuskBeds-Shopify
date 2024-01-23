@@ -52,17 +52,20 @@
     <p>{{ section.settings.section_subtitle }}</p>
   </div>
 
-  {%- for i in (1..4) -%}
-    {%- assign collectionId = "collection" | append: i -%}
-    {%- assign collection = collections[collectionId] -%}
-    {{collection | debug}}
-    {%- if collection -%}
-      <div class="collection-box">
-        <img src="{{ collection.image.src | image_url: 'original' }}" alt="{{ collection.title }}" width="200" height="200">
-        <p>{{ collection.title }}</p>
-      </div>
-    {%- endif -%}
-  {%- endfor -%}
+{%- for i in (1..4) -%}
+  {%- assign collectionId = "collection" | append: i -%}
+  {{ "Debug: collectionId - " | append: collectionId | debug }}
+  {%- assign collection = collections[collectionId] -%}
+  {{ "Debug: collection - " | append: collection | debug }}
+  {%- if collection -%}
+    <div class="collection-box">
+      <img src="{{ collection.image.src | image_url: 'original' }}" alt="{{ collection.title }}" width="200" height="200">
+      <p>{{ collection.title }}</p>
+    </div>
+  {%- else -%}
+    {{ "Debug: No collection found for collectionId - " | append: collectionId | debug }}
+  {%- endif -%}
+{%- endfor -%}
 </div>
 
 
