@@ -53,8 +53,8 @@
   </div>
 
 {%- for i in (1..4) -%}
-  {%- assign collectionId = i -%}
-  {%- assign collection = collections[collectionId].products -%}
+  {%- assign collectionId = "collection" | append: i -%}
+  {%- assign collection = collections.id[collectionId].products -%}
   {{ "Debug: collectionId - " | append: collectionId | debug }}
   {{ "Debug: collection - " | append: collection | debug }}
   {%- if collection.size > 0 -%}
