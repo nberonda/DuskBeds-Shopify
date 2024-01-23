@@ -54,7 +54,8 @@
 
   {%- for i in (1..4) -%}
     {%- assign collectionId = section.settings["collection"] | append: i -%}
-    {%- assign collection = collections[collectionId] -%}
+    {%- assign handle = section.settings[collectionId] -%}
+    {%- assign collection = collections[handle] -%}
     {%- if collection -%}
       <div class="collection-box">
         <a href="{{ collection.url }}">
