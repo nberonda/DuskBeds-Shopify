@@ -96,5 +96,9 @@
     line-height: normal;
     text-decoration-line: underline;
     text-transform: uppercase;
+    max-width: calc(100% - 24px); /* the px are set to the sum of left and right margins */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 </style>
