@@ -62,7 +62,7 @@
       {%- assign product = collection.products.first -%}
       {%- if product.featured_image -%}
         <div class="collection-box">
-          <img src="{{ product.featured_image.src | image_url: 'original' }}" alt="{{ product.title }}" width="200" height="200">
+            <img src="{{ product.featured_image.src | image_url: collection.products.first.images.first.src }}" alt="{{ product.title }}" width="200" height="200">
           <p>{{ collection.title }}</p>
         </div>
       {%- else -%}
