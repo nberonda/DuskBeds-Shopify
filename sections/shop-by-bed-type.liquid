@@ -60,7 +60,7 @@
       <div class="collection-box">
         <a href="{{ collection.url }}">
           <img src="{{ collection.image.src | img_url: 'original' }}" alt="{{ collection.title }}" width="200" height="200">
-          <p>{{ collection.title }}</p>
+          <p class="collection-title">{{ collection.title }}</p>
         </a>
       </div>
     {%- endif -%}
@@ -71,5 +71,30 @@
 <style>
   .custom-collections {
     background-color: {{ section.settings.background_color }};
+  }
+
+    .collection-box {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .collection-box img {
+    max-width: 100%;
+    height: auto;
+  }
+
+   .collection-title {
+    position: absolute;
+    bottom: 35px;
+    left: 12px;
+    color: #FFF !important;
+    font-family: Montserrat !important;
+    font-size: 28.04px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: uppercase;
   }
 </style>
