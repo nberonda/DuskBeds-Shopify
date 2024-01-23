@@ -56,8 +56,6 @@
     {%- assign collectionId = "collection" | append: i -%}
     {%- assign handle = section.settings[collectionId] -%}
     {%- assign collection = collections[handle] -%}
-    {{ "Debug: collectionId - " | append: collectionId | debug }}
-    {{ "Debug: collection - " | append: collection | debug }}
     {%- if collection.products.size > 0 -%}
       {%- assign product = collection.products.first -%}
       {%- if product.featured_image -%}
