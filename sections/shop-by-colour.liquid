@@ -55,6 +55,7 @@
   {%- for i in (1..4) -%}
     {%- assign collectionId = settings["collection"] | append: i -%}
     {%- assign collection = collections[collectionId] -%}
+    {{collection | json}}
     {%- if collection -%}
       <div class="collection-box">
         <img src="{{ collection.image.src | image_url: 'original' }}" alt="{{ collection.title }}" width="200" height="200">
