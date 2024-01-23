@@ -53,7 +53,7 @@
   </div>
 
   {%- for i in (1..4) -%}
-    {%- assign collectionId = settings["collection"] | append: i -%}
+    {%- assign collectionId = "collection" | append: i -%}
     {%- assign collection = collections[collectionId] -%}
     {{collectionId | json}}
     {%- if collection -%}
