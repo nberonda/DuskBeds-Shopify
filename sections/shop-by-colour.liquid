@@ -59,7 +59,7 @@
   {{ "Debug: collection - " | append: collection | debug }}
   {%- if collection.size > 0 -%}
     <div class="collection-box">
-      <img src="{{ collection.first.image.src | image_url: 'original' }}" alt="{{ collection.first.title }}" width="200" height="200">
+      <img src="{{ collection.first.image.src | image_url: 'original' }}" alt="{{ collection.tittle }}" width="200" height="200">
       <p>{{ collection.first.title }}</p>
     </div>
   {%- else -%}
