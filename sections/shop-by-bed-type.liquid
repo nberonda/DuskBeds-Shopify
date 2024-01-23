@@ -52,19 +52,19 @@
   </div>
   <div class="collection-boxes">
 
-  {%- for i in (1..4) -%}
-    {%- assign collectionId = "collection" | append: i -%}
-    {%- assign handle = section.settings[collectionId] -%}
-    {%- assign collection = collections[handle] -%}
-    {%- if collection -%}
-      <div class="collection-box">
-        <a href="{{ collection.url }}">
-          <img src="{{ collection.image.src | img_url: 'original' }}" alt="{{ collection.title }}">
-          <p class="collection-title">{{ collection.title }}</p>
-        </a>
-      </div>
-    {%- endif -%}
-  {%- endfor -%}
+{%- for i in (1..4) -%}
+  {%- assign collectionId = "collection" | append: i -%}
+  {%- assign handle = section.settings[collectionId] -%}
+  {%- assign collection = collections[handle] -%}
+  {%- if collection -%}
+    <div class="collection-box">
+      <a href="{{ collection.url }}">
+        <img src="{{ collection.image.src | img_url: 'original' }}" alt="{{ collection.title }}">
+        <p class="collection-title">{{ collection.title }}</p>
+      </a>
+    </div>
+  {%- endif %}
+{% endfor %}
 </div>
 
 
