@@ -60,8 +60,10 @@
       {%- assign product = collection.products.first -%}
       {%- if product.featured_image -%}
         <div class="collection-box">
-          <img src="{{ product.featured_image.src | img_url: 'original' }}" alt="{{ product.title }}" width="200" height="200">
-          <p>{{ collection.title }}</p>
+          <a href="{{ collection.url }}">
+            <img src="{{ product.featured_image.src | img_url: 'original' }}" alt="{{ product.title }}" width="200" height="200">
+            <p>{{ collection.title }}</p>
+          </a>
         </div>
       {%- else -%}
         {{ "Debug: No featured image found for product in collection for collectionId - " | append: collectionId | debug }}
