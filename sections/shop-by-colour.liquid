@@ -52,21 +52,26 @@
     <p>{{ section.settings.section_subtitle }}</p>
   </div>
 
-{%- for i in (1..4) -%}
-  {%- assign collectionId = "collection" | append: i -%}
-  {%- assign handle = section.settings[collectionId] -%}
-  {%- assign collection = collections[handle] -%}
-  {{ "Debug: collectionId - " | append: collectionId | debug }}
-  {{ "Debug: collection - " | append: collection | debug }}
-  {%- if collection.products.size > 0 -%}
-    <div class="collection-box">
-      <img src="{{ collection.products.first.image.src | image_url: 'original' }}" alt="{{ collection.products.first.title }}" width="200" height="200">
-      <p>{{ collection.products.first.title }}</p>
-    </div>
-  {%- else -%}
-    {{ "Debug: No products found in collection for collectionId - " | append: collectionId | debug }}
-  {%- endif -%}
-{%- endfor -%}
+  {%- for i in (1..4) -%}
+    {%- assign collectionId = "collection" | append: i -%}
+    {%- assign handle = section.settings[collectionId] -%}
+    {%- assign collection = collections[handle] -%}
+    {{ "Debug: collectionId - " | append: collectionId | debug }}
+    {{ "Debug: collection - " | append: collection | debug }}
+    {%- if collection.products.size > 0 -%}
+      {%- assign product = collection.products.first -%}
+      {%- if product.featured_image -%}
+        <div class="collection-box">
+          <img src="{{ product.featured_image.src | image_url: 'original' }}" alt="{{ product.title }}" width="200" height="200">
+          <p>{{ product.title }}</p>
+        </div>
+      {%- else -%}
+        {{ "Debug: No featured image found for product in collection for collectionId - " | append: collectionId | debug }}
+      {%- endif -%}
+    {%- else -%}
+      {{ "Debug: No products found in collection for collectionId - " | append: collectionId | debug }}
+    {%- endif -%}
+  {%- endfor -%}
 </div>
 
 
