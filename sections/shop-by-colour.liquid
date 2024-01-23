@@ -62,7 +62,7 @@
         <div class="collection-box">
           <a href="{{ collection.url }}">
             <img src="{{ collection.image.src | img_url: 'original' }}" alt="{{ product.title }}" width="200" height="200">
-            <p>{{ collection.title }}</p>
+            <p class:"collection-title">{{ collection.title }}</p>
           </a>
         </div>
       {%- else -%}
