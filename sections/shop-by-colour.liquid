@@ -54,13 +54,14 @@
 
 {%- for i in (1..4) -%}
   {%- assign collectionId = "collection" | append: i -%}
-  {%- assign collection = collections[collectionId] -%}
+  {%- assign handle = section.settings[collectionId] -%}
+  {%- assign collection = collections[handle] -%}
   {{ "Debug: collectionId - " | append: collectionId | debug }}
   {{ "Debug: collection - " | append: collection | debug }}
-  {%- if collection.size > 0 -%}
+  {%- if collection.products.size > 0 -%}
     <div class="collection-box">
-      <img src="{{ collection.first.image.src | image_url: 'original' }}" alt="{{ collection.tittle }}" width="200" height="200">
-      <p>{{ collection.first.title }}</p>
+      <img src="{{ collection.products.first.image.src | image_url: 'original' }}" alt="{{ collection.products.first.title }}" width="200" height="200">
+      <p>{{ collection.products.first.title }}</p>
     </div>
   {%- else -%}
     {{ "Debug: No products found in collection for collectionId - " | append: collectionId | debug }}
