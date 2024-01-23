@@ -61,7 +61,7 @@
       {%- if product.featured_image -%}
         <div class="collection-box">
           <a href="{{ collection.url }}">
-            <img src="{{ product.featured_image.src | img_url: 'original' }}" alt="{{ product.title }}" width="200" height="200">
+            <img src="{{ collection.image.src | img_url: 'original' }}" alt="{{ product.title }}" width="200" height="200">
             <p>{{ collection.title }}</p>
           </a>
         </div>
