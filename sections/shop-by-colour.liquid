@@ -53,7 +53,7 @@
   </div>
 
 {%- for i in (1..4) -%}
-  {%- assign collectionId = i -%}
+  {%- assign collectionId = i | sentence -%}
   {%- assign collection = collections[collectionId].products -%}
   {{ "Debug: collectionId - " | append: collectionId | debug }}
   {{ "Debug: collection - " | append: collection | debug }}
