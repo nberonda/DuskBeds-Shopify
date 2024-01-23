@@ -58,7 +58,7 @@
   {%- assign collection = collections[handle] -%}
   {{ "Debug: collectionId - " | append: collectionId | debug }}
   {{ "Debug: collection - " | append: collection | debug }}
-  {%- if collection.products.size > 0 -%}
+  {%- if collection.products > 0 -%}
     <div class="collection-box">
       <img src="{{ collection.first.image.src | image_url: 'original' }}" alt="{{ collection.first.title }}" width="200" height="200">
       <p>{{ collection.products.first.title }}</p>
